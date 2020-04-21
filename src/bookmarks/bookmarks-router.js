@@ -80,7 +80,23 @@ bookmarkRouter
 
     })
     .delete((req, res)=>{
+        const { id } = req.params;
 
+        const index = bookmarks.findIndex(b => b.id===id);
+
+        // make sure we actually have a bookmark with that id
+        if (index === -1) {
+          return res
+            .status(404)
+            .send('Bookmark not found');
+        }
+      
+        bookmarks.splice(index, 1);
+
+        logger.info(`Bookmark with id ${id} deleted`);
+        res
+            .status(204)
+            .end();
     })
 
 module.exports=bookmarkRouter;
