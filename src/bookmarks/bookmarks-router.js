@@ -6,6 +6,8 @@ const { v4: uuid} = require('uuid');
 const logger = require('../logger');
 const { bookmarks } = require('../bookmarks.js')
 
+const validRatings = [1,2,3,4,5];
+
 bookmarkRouter
     .route('/bookmarks')
     .get((req, res)=>{
@@ -27,6 +29,16 @@ bookmarkRouter
          .status(400)
          .send('Invalid data');
         }
+
+        if(rating){
+            if(!validRatings.includes(Number(rating))){
+                logger.error(`Rating must be a number 1-5`);
+                return res
+                 .status(400)
+                 .send('Invalid data');
+            }
+        }
+
         if(!title){
             logger.error(`Title is required`);
             return res

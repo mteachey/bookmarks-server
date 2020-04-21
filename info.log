@@ -2,3 +2,5 @@
 {"message":"Bookmark with id 7fe5f080-f3aa-40c9-ac3d-867b0524eaab created","level":"info"}
 {"message":"Bookmark with id f17d67eb-7f3c-4f53-8050-11b5f0d1058f created","level":"info"}
 {"message":"Bookmark with id f17d67eb-7f3c-4f53-8050-11b5f0d1058f deleted","level":"info"}
+{"message":"Bookmark with id f9859bbd-fa73-4fc3-aba0-ce9b08850088 created","level":"info"}
+{"message":"Rating must be a number 1-5","level":"error"}
