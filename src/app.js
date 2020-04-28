@@ -6,6 +6,7 @@ const helmet = require('helmet')
 const { NODE_ENV } = require('./config')
 const logger = require('./logger');
 const bookmarkRouter = require('./bookmarks/bookmarks-router.js');
+const BookmarksService = require('./bookmarks-service.js')
 
 const app = express()
 
@@ -18,7 +19,7 @@ app.use(helmet());
 app.use(cors());
 
 //validate API_Token
-app.use(function validateBearerToken(req, res, next){
+/*app.use(function validateBearerToken(req, res, next){
     const apiToken = process.env.API_TOKEN
     const authToken = req.get('Authorization')
 
@@ -27,12 +28,12 @@ app.use(function validateBearerToken(req, res, next){
         return res.status(401).json({ error: 'Unauthorized request'})
     }
     next()
-})
+})*/
 
 app.use(bookmarkRouter);
 
 app.get('/',(req,res)=>{
-    res.send('Hello, world!')
+    res.status(200).send('Hello, world!')
 })
 
 app.use(function errorHandler(error, req, res, next){

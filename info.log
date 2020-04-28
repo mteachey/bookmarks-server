@@ -7,3 +7,20 @@
 {"message":"Rating must be a number 1-5","level":"error"}
 {"message":"Bookmark with id 126f2c2a-65f0-43c7-9367-aec80da7b8ed created","level":"info"}
 {"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Unauthorized request to path: /","level":"error"}
+{"message":"Bookmark with id 123 not found","level":"error"}
+{"message":"Bookmark with id 123 not found","level":"error"}
+{"message":"Bookmark with id 123 not found","level":"error"}
+{"message":"Bookmark with id 123 not found","level":"error"}
+{"message":"Bookmark with id 123 not found","level":"error"}
