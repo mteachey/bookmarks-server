@@ -1,5 +1,6 @@
 const express = require('express');
 const xss = require('xss')
+const { isWebUri } = require('valid-url')
 
 const bookmarkRouter = express.Router();
 const bodyParser = express.json();
@@ -11,12 +12,10 @@ const BookmarksService = require('../bookmarks-service.js')
 const serializeBookmark = bookmark =>({
     id:bookmark.id,
     title:xss(bookmark.title),
-    url:xss(bookmark.url),
+    url:bookmark.url,
     description:xss(bookmark.description),
     rating:bookmark.rating
 })
-
-const validRatings = [1,2,3,4,5];
 
 bookmarkRouter
     .route('/bookmarks')
@@ -33,24 +32,32 @@ bookmarkRouter
     .post(bodyParser, (req, res, next)=>{
        const { description, rating, title, url } = req.body;
 
-       const newBookmark = { description, rating, title, url }
-
-       for (const [key, value] of Object.entries(newBookmark)){
-           if(value == null && key !== description){ //descrip not req'd
-               return res.status(400).json({
-                   error: { message : `Missing '${key}' in request body`}
-               })
-           }
-       }
-
-       if(rating){
-            if(!validRatings.includes(Number(rating))){
-                logger.error(`Rating must be a number 1-5`);
-                return res
-                 .status(400)
-                 .json({error : {message : 'Invalid data'}});
-            }
+       const ratingNum = Number(rating);
+       
+       for (const field of ['title', 'url', 'rating']) {
+        if (!req.body[field]) {
+          logger.error(`${field} is required`)
+          return res.status(400).send({
+            error: { message : `Missing '${field}' in request body`}
+          })
         }
+      }
+    
+      if (!Number.isInteger(ratingNum) || ratingNum < 0 || ratingNum > 5) {
+        logger.error(`Invalid rating '${rating}' supplied`)
+        return res.status(400).send({
+          error: { message: `'rating' must be a number between 0 and 5` }
+        })
+      }
+  
+      if (!isWebUri(url)) {
+        logger.error(`Invalid url '${url}' supplied`)
+        return res.status(400).send({
+          error: { message: `'url' must be a valid URL` }
+        })
+      }
+  
+      const newBookmark = { title, url, description, rating }
 
         BookmarksService.insertBookmark(
             req.app.get('db'),
@@ -86,13 +93,7 @@ bookmarkRouter
         .catch(next)
     })
     .get((req, res, next)=>{
-        res.json({
-            id:res.bookmark.id,
-            title:xss(res.bookmark.title),
-            url:xss(res.bookmark.url),
-            description:xss(res.bookmark.description),
-            rating:res.bookmark.rating
-        })
+        res.json(serializeBookmark(res.bookmark))
     })
     .delete((req, res, next)=>{
         BookmarksService.deleteBookmark(

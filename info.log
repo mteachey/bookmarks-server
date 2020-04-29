@@ -46,3 +46,24 @@
 {"message":"Rating must be a number 1-5","level":"error"}
 {"message":"Bookmark with id 1 created","level":"info"}
 {"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}

@@ -61,7 +61,6 @@ describe('Bookmarks Endpoints', ()=>{
                 .expect(res => {
                   expect(res.body[0].title).to.eql(expectedBookmark.title)
                   expect(res.body[0].description).to.eql(expectedBookmark.description)
-                  expect(res.body[0].url).to.eql(expectedBookmark.url)
                 })
             })//end it XSS
         })//end contex XSS
@@ -112,7 +111,6 @@ describe('Bookmarks Endpoints', ()=>{
                 .expect(res => {
                     expect(res.body.title).to.eql(expectedBookmark.title)
                     expect(res.body.description).to.eql(expectedBookmark.description)
-                    expect(res.body.url).to.eql(expectedBookmark.url)
                 })
             })//end it remves XSS
         })//end of contxt for XSS
@@ -178,7 +176,7 @@ describe('Bookmarks Endpoints', ()=>{
                     .post('/bookmarks')
                     .send(newBookmark)
                     .expect(400, {
-                        error: { message: `Invalid data` }
+                        error: { message: `'rating' must be a number between 0 and 5` }
                     })
         })//end of it creates bookmark
 
@@ -191,7 +189,6 @@ describe('Bookmarks Endpoints', ()=>{
               .expect(res => {
                 expect(res.body.title).to.eql(expectedBookmark.title)
                 expect(res.body.description).to.eql(expectedBookmark.description)
-                expect(res.body.url).to.eql(expectedBookmark.url)
               })
           })
 
