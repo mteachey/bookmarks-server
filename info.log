@@ -67,3 +67,66 @@
 {"message":"Invalid rating '8' supplied","level":"error"}
 {"message":"Bookmark with id 1 created","level":"info"}
 {"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"rating is required","level":"error"}
+{"message":"title is required","level":"error"}
+{"message":"url is required","level":"error"}
+{"message":"Invalid rating '8' supplied","level":"error"}
+{"message":"Bookmark with id 1 created","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Bookmark with id 4deleted","level":"info"}
+{"message":"Bookmark with id 1deleted","level":"info"}
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Unauthorized request to path: /api/bookmarks","level":"error"}
+{"message":"Bookmark with id 8 created","level":"info"}
+{"message":"title is required","level":"error"}
+{"message":"Bookmark with id 9 created","level":"info"}
+{"message":"Bookmark with id 10 created","level":"info"}
+{"message":"Bookmark with id 10deleted","level":"info"}
+{"message":"Bookmark with id 2deleted","level":"info"}
+{"message":"Bookmark with id 3deleted","level":"info"}
+{"message":"Bookmark with id 11 created","level":"info"}
+{"message":"Bookmark with id 12 created","level":"info"}
+{"message":"Bookmark with id 8deleted","level":"info"}
+{"message":"Bookmark with id 9deleted","level":"info"}
+{"message":"Bookmark with id 11deleted","level":"info"}
+{"message":"Bookmark with id 13 created","level":"info"}
+{"message":"Bookmark with id 14 created","level":"info"}
+{"message":"Bookmark with id 15 created","level":"info"}
+{"message":"Bookmark with id 16 created","level":"info"}
+{"message":"Bookmark with id 12deleted","level":"info"}
